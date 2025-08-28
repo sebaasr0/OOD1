@@ -3,11 +3,7 @@ package assigment1.c1;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Represents a user of the SpotifyMODIFIED system.
- * A user can create playlists, delete them,
- * and add/remove songs from them.
- */
+
 public class User {
     private String username;
     private List<Playlist> playlists;
@@ -17,9 +13,7 @@ public class User {
         this.playlists = new ArrayList<>();
     }
 
-    /**
-     * Create a new playlist of a given type (pop/rock/trap).
-     */
+//create playlist
     public void createPlaylist(String name, String type) {
         Playlist playlist = null;
         switch(type.toLowerCase()) {
@@ -34,33 +28,25 @@ public class User {
         }
     }
 
-    /**
-     * Delete a playlist
-     */
+//delete playlist
     public void deletePlaylist(Playlist playlist) {
         playlists.remove(playlist);
         System.out.println("🗑️ Deleted playlist: " + playlist.getName());
     }
 
-    /**
-     * Add a song to a given playlist
-     */
+//add song to playlist
     public void addSongToPlaylist(Playlist playlist, Song song) {
         playlist.addSong(song);
         System.out.println("➕ Added " + song.getTitle() + " to " + playlist.getName());
     }
 
-    /**
-     * Remove a song from a given playlist
-     */
+//remove song from playlist
     public void removeSongFromPlaylist(Playlist playlist, Song song) {
         playlist.removeSong(song);
         System.out.println("➖ Removed " + song.getTitle() + " from " + playlist.getName());
     }
 
-    /**
-     * Get all playlists for this user
-     */
+//get all playlists
     public List<Playlist> getPlaylists() {
         return playlists;
     }

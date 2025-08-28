@@ -6,21 +6,22 @@ public class MusicLibrary {
     private static Map<String, List<Song>> library = new HashMap<>();
 
     static {
-        // Pop songs
+        //HashMap is a data structure that stores key-value pairs. Unique keys
+        // this library is the pop songs data
         library.put("pop", Arrays.asList(
                 new Song("Shape of You", "Ed Sheeran", 4.2, "happy"),
-                new Song("Blinding Lights", "The Weeknd", 3.5, "happy"),
-                new Song("Someone Like You", "Adele", 4.8, "sad"),
+                new Song("Fireworks", "Katy Perry", 3.5, "happy"),
+                new Song("You Belong with Me", "Taylor Swift", 4.8, "sad"),
                 new Song("Levitating", "Dua Lipa", 3.4, "happy"),
                 new Song("Drivers License", "Olivia Rodrigo", 4.1, "sad"),
-                new Song("Watermelon Sugar", "Harry Styles", 2.9, "happy"),
-                new Song("Bad Guy", "Billie Eilish", 3.2, "happy"),
-                new Song("Senorita", "Shawn Mendes & Camila Cabello", 3.1, "happy"),
+                new Song("Live while we're young", "One Direction", 2.9, "happy"),
+                new Song("Best Song Ever", "One Direction", 3.2, "happy"),
+                new Song("Kiss you", "One Direction", 3.1, "happy"),
                 new Song("Circles", "Post Malone", 3.8, "happy"),
                 new Song("Don't Start Now", "Dua Lipa", 3.3, "happy")
         ));
 
-        // Rock songs
+        // this library is the rock songs data
         library.put("rock", Arrays.asList(
                 new Song("Bohemian Rhapsody", "Queen", 5.9, "happy"),
                 new Song("Smells Like Teen Spirit", "Nirvana", 5.0, "happy"),
@@ -34,7 +35,7 @@ public class MusicLibrary {
                 new Song("Wonderwall", "Oasis", 4.2, "sad")
         ));
 
-        // Argentinian Trap songs
+        //this library is the Argentinian Trap songs data
         library.put("trap", Arrays.asList(
                 new Song("She Don't Give a Fo", "Duki", 3.5, "happy"),
                 new Song("Loca", "KHEA ft. Duki, Cazzu", 3.7, "happy"),
@@ -49,16 +50,14 @@ public class MusicLibrary {
         ));
     }
 
-    /**
-     * Get all songs by genre
-     */
+    //All songs from the library by a given genre.
+    //Uses HashMap's get() method to quickly find songs based on the genre key.
     public static List<Song> getSongsByGenre(String genre) {
         return library.getOrDefault(genre.toLowerCase(), new ArrayList<>());
     }
 
-    /**
-     * Get all songs by mood
-     */
+    //All songs from the library by a given mood
+    //Loops through every value in the HashMap and collects songs matching the mood.
     public static List<Song> getSongsByMood(String mood) {
         List<Song> result = new ArrayList<>();
         for (List<Song> songs : library.values()) {
@@ -71,7 +70,8 @@ public class MusicLibrary {
         return result;
     }
 
-
+    //All songs in the library regardless of genre or mood.
+    //Combines all lists from the HashMap into a single list.
     public static List<Song> getAllSongs() {
         List<Song> all = new ArrayList<>();
         for (List<Song> songs : library.values()) {

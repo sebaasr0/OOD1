@@ -3,22 +3,22 @@ package assigment1.c1;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * RockPlaylist class that implements Playlist interface.
- * Stores and plays Rock songs.
- */
+// RockPlaylist class implementing Playlist interface
 public class RockPlaylist implements Playlist {
     private String name;
     private List<Song> songs;
 
+    // Constructor
     public RockPlaylist(String name) {
         this.name = name;
         this.songs = new ArrayList<>();
     }
 
+    // Getter
     @Override
     public String getName() { return name; }
 
+    // Methods to add, remove, and play songs
     @Override
     public void addSong(Song song) { songs.add(song); }
 

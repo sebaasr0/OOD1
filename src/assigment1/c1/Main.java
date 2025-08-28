@@ -2,15 +2,18 @@ package assigment1.c1;
 
 import java.util.*;
 
+// Main class to demonstrate functionality
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        // Sample songs
         System.out.println("Welcome to SpotifyMODIFIED 🎵");
         System.out.println("Options: \n1. View all songs \n2. View by genre \n3. View by mood");
         int choice = sc.nextInt();
         sc.nextLine(); // consume newline
 
+        // User interaction¿
         switch (choice) {
             case 1:
                 System.out.println("All songs:");

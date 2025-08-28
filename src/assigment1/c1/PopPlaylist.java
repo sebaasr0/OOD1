@@ -3,10 +3,7 @@ package assigment1.c1;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * PopPlaylist class that implements Playlist interface.
- * Stores and plays Pop songs.
- */
+
 public class PopPlaylist implements Playlist {
     private String name;
     private List<Song> songs;
@@ -16,9 +13,11 @@ public class PopPlaylist implements Playlist {
         this.songs = new ArrayList<>();
     }
 
+// Getter
     @Override
     public String getName() { return name; }
 
+// Methods to add, remove, and play songs
     @Override
     public void addSong(Song song) { songs.add(song); }
 
