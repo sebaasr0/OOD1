@@ -8,7 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         // Sample songs
-        System.out.println("Welcome to SpotifyMODIFIED 🎵");
+        System.out.println("Welcome to Spotify");
         System.out.println("Options: \n1. View all songs \n2. View by genre \n3. View by mood");
         int choice = sc.nextInt();
         sc.nextLine();
