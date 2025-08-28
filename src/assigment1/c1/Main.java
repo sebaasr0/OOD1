@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Welcome to SpotifyMODIFIED 🎵");
         System.out.println("Options: \n1. View all songs \n2. View by genre \n3. View by mood");
         int choice = sc.nextInt();
-        sc.nextLine(); // consume newline
+        sc.nextLine();
 
         // User interaction¿
         switch (choice) {

@@ -20,30 +20,30 @@ public class User {
             case "pop": playlist = new PopPlaylist(name); break;
             case "rock": playlist = new RockPlaylist(name); break;
             case "trap": playlist = new TrapPlaylist(name); break;
-            default: System.out.println("❌ Unknown playlist type: " + type);
+            default: System.out.println(" Unknown playlist type: " + type);
         }
         if (playlist != null) {
             playlists.add(playlist);
-            System.out.println("✅ Created " + type + " playlist: " + name);
+            System.out.println(" Created " + type + " playlist: " + name);
         }
     }
 
 //delete playlist
     public void deletePlaylist(Playlist playlist) {
         playlists.remove(playlist);
-        System.out.println("🗑️ Deleted playlist: " + playlist.getName());
+        System.out.println("🗑 Deleted playlist: " + playlist.getName());
     }
 
 //add song to playlist
     public void addSongToPlaylist(Playlist playlist, Song song) {
         playlist.addSong(song);
-        System.out.println("➕ Added " + song.getTitle() + " to " + playlist.getName());
+        System.out.println(" Added " + song.getTitle() + " to " + playlist.getName());
     }
 
 //remove song from playlist
     public void removeSongFromPlaylist(Playlist playlist, Song song) {
         playlist.removeSong(song);
-        System.out.println("➖ Removed " + song.getTitle() + " from " + playlist.getName());
+        System.out.println(" Removed " + song.getTitle() + " from " + playlist.getName());
     }
 
 //get all playlists

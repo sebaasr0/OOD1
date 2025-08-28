@@ -2,11 +2,13 @@ package assigment1.c1;
 
 import java.util.*;
 
+//HashMap is a data structure that stores key-value pairs. Unique keys
 public class MusicLibrary {
     private static Map<String, List<Song>> library = new HashMap<>();
 
     static {
-        //HashMap is a data structure that stores key-value pairs. Unique keys
+
+
         // this library is the pop songs data
         library.put("pop", Arrays.asList(
                 new Song("Shape of You", "Ed Sheeran", 4.2, "happy"),

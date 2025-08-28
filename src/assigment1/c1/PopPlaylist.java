@@ -3,7 +3,7 @@ package assigment1.c1;
 import java.util.ArrayList;
 import java.util.List;
 
-
+//PopPlaylist class implementing Playlist interface
 public class PopPlaylist implements Playlist {
     private String name;
     private List<Song> songs;
