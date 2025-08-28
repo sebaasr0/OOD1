@@ -13,11 +13,11 @@ public class PopPlaylist implements Playlist {
         this.songs = new ArrayList<>();
     }
 
-// Getter
+    // Getter
     @Override
     public String getName() { return name; }
 
-// Methods to add, remove, and play songs
+    // Methods to add, remove, and play songs
     @Override
     public void addSong(Song song) { songs.add(song); }
 

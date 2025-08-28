@@ -31,7 +31,7 @@ public class User {
 //delete playlist
     public void deletePlaylist(Playlist playlist) {
         playlists.remove(playlist);
-        System.out.println("🗑 Deleted playlist: " + playlist.getName());
+        System.out.println(" Deleted playlist: " + playlist.getName());
     }
 
 //add song to playlist

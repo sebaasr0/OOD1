@@ -13,7 +13,7 @@ public class Main {
         int choice = sc.nextInt();
         sc.nextLine();
 
-        // User interaction¿
+        // User interaction
         switch (choice) {
             case 1:
                 System.out.println("All songs:");
